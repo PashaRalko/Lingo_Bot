@@ -273,6 +273,9 @@ async def eng_lang(callback: types.CallbackQuery):
 @dp.callback_query_handler(text_contains="french")
 async def eng_lang(callback: types.CallbackQuery):
     languages.user_language = 'French'
+    database.cursor.execute(
+        f"UPDATE registration_table SET language = '{languages.user_language}' WHERE chat_id = {callback.from_user.id}")
+    # Отправляем сообщение с текстом на выбранном языке и клавиатурой регистрации
     await bot.send_message(callback.from_user.id, text=languages.languages[languages.user_language]['main_menu'],
                            reply_markup=keyboard.main_menu)
     await callback.message.delete()
@@ -281,6 +284,9 @@ async def eng_lang(callback: types.CallbackQuery):
 @dp.callback_query_handler(text_contains="deutsch")
 async def eng_lang(callback: types.CallbackQuery):
     languages.user_language = 'Deutsch'
+    database.cursor.execute(
+        f"UPDATE registration_table SET language = '{languages.user_language}' WHERE chat_id = {callback.from_user.id}")
+    # Отправляем сообщение с текстом на выбранном языке и клавиатурой регистрации
     await bot.send_message(callback.from_user.id, text=languages.languages[languages.user_language]['main_menu'],
                            reply_markup=keyboard.main_menu)
     await callback.message.delete()
@@ -289,6 +295,9 @@ async def eng_lang(callback: types.CallbackQuery):
 @dp.callback_query_handler(text_contains="сhinese")
 async def eng_lang(callback: types.CallbackQuery):
     languages.user_language = 'Chinese'
+    database.cursor.execute(
+        f"UPDATE registration_table SET language = '{languages.user_language}' WHERE chat_id = {callback.from_user.id}")
+    # Отправляем сообщение с текстом на выбранном языке и клавиатурой регистрации
     await bot.send_message(callback.from_user.id, text=languages.languages[languages.user_language]['main_menu'],
                            reply_markup=keyboard.main_menu)
     await callback.message.delete()
@@ -297,6 +306,9 @@ async def eng_lang(callback: types.CallbackQuery):
 @dp.callback_query_handler(text_contains="italiano")
 async def eng_lang(callback: types.CallbackQuery):
     languages.user_language = 'Italiano'
+    database.cursor.execute(
+        f"UPDATE registration_table SET language = '{languages.user_language}' WHERE chat_id = {callback.from_user.id}")
+    # Отправляем сообщение с текстом на выбранном языке и клавиатурой регистрации
     await bot.send_message(callback.from_user.id, text=languages.languages[languages.user_language]['main_menu'],
                            reply_markup=keyboard.main_menu)
     await callback.message.delete()
@@ -305,6 +317,9 @@ async def eng_lang(callback: types.CallbackQuery):
 @dp.callback_query_handler(text_contains="russian")
 async def eng_lang(callback: types.CallbackQuery):
     languages.user_language = 'Русский'
+    database.cursor.execute(
+        f"UPDATE registration_table SET language = '{languages.user_language}' WHERE chat_id = {callback.from_user.id}")
+    # Отправляем сообщение с текстом на выбранном языке и клавиатурой регистрации
     await bot.send_message(callback.from_user.id, text=languages.languages[languages.user_language]['main_menu'],
                            reply_markup=keyboard.main_menu)
     await callback.message.delete()
