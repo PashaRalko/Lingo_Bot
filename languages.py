@@ -26,8 +26,9 @@ languages = {
                          'Choose the next action!',
         'request_sent': 'Request sent to the user!\n'
                         'Choose the next action!',
-        'main_menu_back': r'Let\'s go back to the main menu!',
+        'main_menu_back': "Let's go back to the main menu!",
         'next_step': 'Choose the next action!',
+        'have_acc': 'You already have an account!',
     },
 
     'Русский': {
@@ -57,6 +58,11 @@ languages = {
                         'Выберите следующее действие!',
         'main_menu_back': 'Вернемся в главное меню!',
         'next_step': 'Выбери следующее действие!',
+        'have_acc': 'У тебя уже есть аккаунт!',
+        'no_users': 'У меня пока нет того, кого я могу тебе предложить!',
+        'chose_next_step': 'Выбери следующее действие',
+        'chat_with_you': 'Этот пользователь хочет общаться с тобой!',
+        'link': 'Ссылка на пользователя! - '
     },
     'French': {
            'hi': "Привет! Я телеграм-бот Lingo! "

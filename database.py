@@ -9,7 +9,8 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS registration_table
               age INTEGER,
               country TEXT,
               language TEXT,
-              photo BLOB)''')
+              photo BLOB,
+              username TEXT)''')
 
 cursor.execute('''CREATE TABLE IF NOT EXISTS likes_table
              (id INTEGER PRIMARY KEY AUTOINCREMENT,
